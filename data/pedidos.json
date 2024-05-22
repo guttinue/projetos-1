@@ -1,0 +1,9 @@
+{
+    "Pratos Principais": {
+        "id": 1,
+        "nome": "Carros",
+        "descricao": "Papel",
+        "calorias": "123",
+        "ingredientes": []
+    }
+}
