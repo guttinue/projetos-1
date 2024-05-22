@@ -1,0 +1,43 @@
+{
+    "promoções": [
+        {
+            "id": 1,
+            "nome": "Sanduiche natural",
+            "descricao": "Sanduíche natural de frango",
+            "calorias": "148 calorias",
+            "ingredientes": [
+                "Frango desfiado",
+                "Tomates",
+                "Salsinha",
+                "Cebola",
+                "Sal",
+                "Maionese"
+            ]
+        },
+        {
+            "id": 2,
+            "nome": "Sopa de tomate",
+            "descricao": "Sopa simples de tomate com alguns temperos",
+            "calorias": "250 calorias",
+            "ingredientes": [
+                "Tomates",
+                "Alho",
+                "Cebola",
+                "Azeite",
+                "Queijo parmesão ralado"
+            ]
+        },
+        {
+            "id": 3,
+            "nome": "Tapioca com ovo",
+            "descricao": "Tapioca simples com recheio de ovo",
+            "calorias": "232 calorias",
+            "ingredientes": [
+                "Massa de tapioca",
+                "Ovos",
+                "Sal",
+                "Manteiga"
+            ]
+        }
+    ]
+}

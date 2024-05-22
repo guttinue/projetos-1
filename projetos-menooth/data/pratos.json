@@ -1,0 +1,34 @@
+{
+    "Pratos Principais": [
+        {
+            "id": 1,
+            "nome": "",
+            "descricao": "",
+            "calorias": "",
+            "ingredientes": [
+                
+            ]
+        },
+        {
+            "id": 2,
+            "nome": "",
+            "descricao": "",
+            "calorias": "",
+            "ingredientes": [
+               
+            ]
+        },
+        {
+            "id": 3,
+            "nome":"",
+            "descricao": "",
+            "calorias":"",
+            "ingredientes": [
+                
+                
+                
+                
+            ]
+        }
+    ]
+}
