@@ -1,22 +1,27 @@
 [
     {
         "id": 1,
-        "nome": "Bebidas"
+        "nome": "Bebidas",
+        "arquivo": "cardapio.json"
     },
     {
         "id": 2,
-        "nome": "Promocoes"
+        "nome": "Promocoes",
+        "arquivo": "cardapio.json"
     },
     {
         "id": 3,
-        "nome": "Entradas"
+        "nome": "Entradas",
+        "arquivo": "cardapio.json"
     },
     {
         "id": 4,
-        "nome": "Pratos Principais"
+        "nome": "Pratos Principais",
+        "arquivo": "cardapio.json"
     },
     {
         "id": 5,
-        "nome": "Sobremesas"
+        "nome": "Sobremesas",
+        "arquivo": "cardapio.json"
     }
 ]

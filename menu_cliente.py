@@ -69,10 +69,12 @@ def selecionar_categoria():
         print("Opção inválida. Por favor, escolha uma opção válida ou 'S' para sair.")
 
 def main():
+    os.system('cls')
     while True:
         categoria = selecionar_categoria()
         if categoria is None:
             break
+        os.system('cls')
         mostrar_pratos_categoria(categoria)
         selecionar_prato(categoria)
         continuar = input("Deseja continuar (S/N)?").strip().lower()

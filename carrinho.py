@@ -91,34 +91,38 @@ def exibir_titulo():
 
 def mensagem_inicio():
     print('-'*20)
-    print('| CARRINHO                                   |')
-    print('| 1- MOSTRAR PEDIDO                          |')
-    print('| 2- REMOVER PEDIDO                          |')
-    print('| 3- ATUALIZAR PEDIDO                        |')
-    print('| 4- ADICIONAR NOVO PEDIDO                   |')
-    print('| 5- PERSONALIZAR PEDIDO                     |')
-    print('| 6- FINALIZAR PEDIDO                        |')
-    print('| 7- VOLTAR AO MENU CLIENTE                  |')
+    print('| CARRINHO                      |')
+    print('| 1- MOSTRAR PEDIDO             |')
+    print('| 2- REMOVER PEDIDO             |')
+    print('| 3- ATUALIZAR PEDIDO           |')
+    print('| 4- ADICIONAR NOVO PEDIDO      |')
+    print('| 5- PERSONALIZAR PEDIDO        |')
+    print('| 6- FINALIZAR PEDIDO           |')
+    print('| 7- VOLTAR AO MENU CLIENTE     |')
     print('-'*20)
 
 def main():
-    exibir_titulo()
     while True:
         mensagem_inicio()
-        opcao = int(input("Escolha uma opção: "))
+        opcao = (input("Escolha uma opção: "))
 
-        if opcao == 1:
+        if opcao == '1':
+            os.system('cls')
             mostrar_pedido()
-        elif opcao == 2:
+        elif opcao == '2':
             remover_pedido()
-        elif opcao == 3:
+        elif opcao == '3':
+            os.system('cls')
+            mostrar_pedido()
             atualizar_pedido()
-        elif opcao == 4:
+        elif opcao == '4':
             cliente.main()
-        elif opcao == 5:
+        elif opcao == '5':
+            os.system('cls')
             mostrar_pedido()
             personalizacao.main()
-        elif opcao == 6:
+        elif opcao == '6':
+            os.system('cls')
             finalizar_pedido()
             # funcao do feedback
             opcao_feedback = input("Deseja realizar um feedback? (s/n): ")
@@ -126,13 +130,13 @@ def main():
                 feedback.main()
                 
             elif opcao_feedback.lower() == 'n':
-                print("Obrigado por usar o sistema!")
+                feedback.temporizador()
                 break
             else:
                 print("Opção inválida, por favor digite novamente")
                 finalizar_pedido()
             
-        elif opcao == 7:
+        elif opcao == '7':
             modulo.main()
         else:
             print("Opção inválida, por favor digite novamente")

@@ -10,8 +10,7 @@ def menu_cliente():
         print('-'*20)
         print("1- VER CARDÁPIO")
         print("2- VER CARRNHO")
-        print("3- PESQUISA POR PRATO")
-        print("4- VOLTAR")
+        print("3- VOLTAR")
         print('-'*20)
 def main():
     while True: 
@@ -20,12 +19,12 @@ def main():
         opcao = input("Escolha uma opção: ")
         
         if opcao == '1':
+            os.system('cls')
             menu.main()
         elif opcao == '2':
+            os.system('cls')
             carrinho.main()
         elif opcao == '3':
-            pass
-        elif opcao == '4':
             os.system('cls')
             top.main()
         else:

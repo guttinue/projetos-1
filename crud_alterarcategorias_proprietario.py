@@ -15,7 +15,7 @@ def salvar_categorias(categorias):
             json.dump(categorias, f, indent=4)
 
             # Função para criar uma nova categoria
-def create_categoria(nome, arquivo):
+def criar_categoria(nome, arquivo):
     categorias = carregar_categorias()
     nova_categoria = {
         'id': len(categorias) + 1,
@@ -26,7 +26,7 @@ def create_categoria(nome, arquivo):
     print(f"Categoria '{nome}' criada com sucesso.")
 
             # Função para ler (listar) todas as categorias
-def read_categorias():
+def ler_categorias():
     categorias = carregar_categorias()
     if categorias:
         print("Lista de categorias:")
@@ -36,7 +36,7 @@ def read_categorias():
         print("Nenhuma categoria encontrada.")
 
             # Função para atualizar os dados de uma categoria
-def update_categoria(categoria_id, novo_nome=None):
+def atualizar_categoria(categoria_id, novo_nome=None):
     categorias = carregar_categorias()
     for categoria in categorias:
         if categoria['id'] == categoria_id:
@@ -48,7 +48,7 @@ def update_categoria(categoria_id, novo_nome=None):
     print(f"Categoria ID '{categoria_id}' não encontrada.")
 
             # Função para excluir uma categoria
-def delete_categoria(categoria_id):
+def deletar_categoria(categoria_id):
     categorias = carregar_categorias()
     categorias = [categoria for categoria in categorias if categoria['id'] != categoria_id]
     salvar_categorias(categorias)
@@ -59,7 +59,7 @@ def delete_categoria(categoria_id):
 def main():
     while True:
         print('-'*20)
-        print("\nMenu de Categorias:")
+        print("MENU DE CATEGORIAS")
         print("1. CRIAR NOVA CATEGORIA")
         print("2. LISTAR CATEGORIAS")
         print("3. ATUALIZAR CATEGORIA")
@@ -72,16 +72,18 @@ def main():
         if escolha == '1':
             nome = input("Nome da nova categoria: ")
             arquivo = input("Nome do arquivo JSON para a categoria: ")
-            create_categoria(nome, arquivo)
+            criar_categoria(nome, arquivo)
         elif escolha == '2':
-            read_categorias()
+            ler_categorias()
         elif escolha == '3':
+            ler_categorias()
             categoria_id = int(input("ID da categoria a ser atualizada: "))
             novo_nome = input("Novo nome da categoria (pressione Enter para manter o nome atual): ")
-            update_categoria(categoria_id, novo_nome if novo_nome else None)
+            atualizar_categoria(categoria_id, novo_nome if novo_nome else None)
         elif escolha == '4':
+            ler_categorias()
             categoria_id = int(input("ID da categoria a ser excluída: "))
-            delete_categoria(categoria_id)
+            deletar_categoria(categoria_id)
         elif escolha == '5':
             print("Saindo...")
             break

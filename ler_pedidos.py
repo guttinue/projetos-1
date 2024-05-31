@@ -1,6 +1,6 @@
 import os 
 import json 
-import modulo_cliente as menu
+import mudulo_proprietario as menu
 
 PEDIDOS_JSON = 'data\\pedidos.json'
 
@@ -33,6 +33,7 @@ def exibir_menu():
 
 def main():
     while True:
+        os.system('cls')
         exibir_menu()
         opcao = input("Digite a opção a sua escolha: ")
         if opcao == '1':

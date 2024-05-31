@@ -1,7 +1,6 @@
 import json
 import os
-import carrinho as carrinho
-
+import carrinho as carrinhot
 # Define o caminho para o arquivo JSON
 carrinho = os.path.join(os.path.dirname(__file__), 'data\\carrinho.json')
 
@@ -101,8 +100,7 @@ def mensagem_inicio():
     print('2- REMOVER INGREDIENTE DO PRATO')
     print('3- MOSTRAR INGREDIENTES DO PRATO')
     print('4- ATUALIZAR INGREDIENTES DO PRATO')
-    print('5- ENVIAR PEDIDO AO CARRINHO')
-    print('6- VOLTAR')
+    print('5- VOLTAR')
     print('-'*20)
 
 # Função principal
@@ -126,11 +124,9 @@ def main():
             ingrediente_novo = input("Digite o novo ingrediente: ")
             atualizar_ingrediente(prato_id, ingrediente_antigo, ingrediente_novo)
         elif opcao == "5":
-            print("Pedido enviado ao carrinho com sucesso!")
-            break
-        elif opcao == '6':
             print("Voltando...")
-            carrinho.main()
+            os.system('cls')
+            carrinhot.main()
         else:
             print("Opção inválida. Tente novamente.")
 

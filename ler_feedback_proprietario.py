@@ -1,7 +1,7 @@
 import os 
 import json
 import crud_proprietario as prato
-import modulo_cliente as menu
+import mudulo_proprietario as menu
 
 FEEDBACKS_JSON = 'data\\feedback.json'
 
@@ -34,6 +34,7 @@ def exibir_menu():
 
 def main():
     while True:
+        os.system('cls')
         exibir_menu()
         opcao = input("Digite a opção a sua escolha: ")
         if opcao == '1':

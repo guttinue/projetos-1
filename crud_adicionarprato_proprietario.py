@@ -107,6 +107,7 @@ def selecionar_categoria():
 
 # Função para exibir o menu principal
 def exibir_menu():
+    os.system('cls')
     print('-'*20)
     print("1- ADICIONAR PRATO")
     print("2- MOSTRAR PRATO")

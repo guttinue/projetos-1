@@ -14,15 +14,15 @@ def exibir_titulo():
 #Função para armazenar a mensagem de opções
 def mensagem_inicio():
     print('-'*20)
-    print('| Seja bem-vindo!   |')
-    print('| 1 - Cadastrar     |')
-    print('| 2 - Login         |')
-    print('| 3 - Sair          |')
+    print('1- CADASTRAR USUÁRIO')
+    print('2- LOGIN')
+    print('3- SAIR')
     print('-'*20)
 
 #Função para escolher uma opção do menu
 def main():
     os.system('cls')
+    exibir_titulo()
     mensagem_inicio()
     opcao = int(input("Escolha uma opçaõ: "))
     
@@ -39,9 +39,7 @@ def main():
             fazer_login(email, senha)
             os.system('cls')
             top.main()
-            
-
-
+            break
         elif opcao == 3:
             print('Programa finalizado.')
             break
