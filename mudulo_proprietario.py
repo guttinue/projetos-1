@@ -3,7 +3,8 @@ import json
 import crud_proprietario as prato
 import ler_feedback_proprietario as feedback
 import crud_alterarcategorias_proprietario as categoria
-import ler_pedidos as pedidos   
+import ler_pedidos as pedidos  
+import main as top 
 
 arquivo = os.path.join(os.path.dirname(__file__), 'data\\cardapio.json')
 CATEGORIAS_JSON = 'data\\categorias.json'
@@ -15,7 +16,7 @@ def menu_proprietario():
         print("2- AJUSTAR CATEGORIAS")
         print("3- LER PEDIDOS")
         print("4- LER FEEDBACKS")
-        print("5- SAIR")
+        print("5- VOLTAR")
         print('-'*20)
 
 def main():
@@ -37,8 +38,8 @@ def main():
             feedback.main()
                     
         elif  opcao == '5':
-            print("Saindo...")
-            break
+            os.system('cls')
+            top.main()
 
         else:
             print("Digite uma opção válida.")
