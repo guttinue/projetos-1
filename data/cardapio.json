@@ -1,0 +1,331 @@
+[
+    {
+        "id": 1,
+        "nome": "Salada Caesar",
+        "descricao": "Salada fresca com alface, croutons e molho Caesar",
+        "preco": 15.0,
+        "ingredientes": [
+            "Alface",
+            "Croutons",
+            "Queijo parmes\u00e3o",
+            "Molho Caesar",
+            "Salada Caesar"
+        ],
+        "categoria": "Entradas"
+    },
+    {
+        "id": 2,
+        "nome": "Bruschetta",
+        "descricao": "P\u00e3o torrado com tomate, manjeric\u00e3o e azeite",
+        "preco": 12.0,
+        "ingredientes": [
+            "P\u00e3o",
+            "Tomate",
+            "Manjeric\u00e3o",
+            "Azeite",
+            "Alho"
+        ],
+        "categoria": "Entradas"
+    },
+    {
+        "id": 3,
+        "nome": "Sopa de Cebola",
+        "descricao": "Sopa cremosa de cebola com queijo gratinado",
+        "preco": 18.0,
+        "ingredientes": [
+            "Cebola",
+            "Queijo",
+            "Caldo de carne",
+            "P\u00e3o"
+        ],
+        "categoria": "Entradas"
+    },
+    {
+        "id": 4,
+        "nome": "An\u00e9is de Lula",
+        "descricao": "An\u00e9is de lula empanados e fritos",
+        "preco": 22.0,
+        "ingredientes": [
+            "Lula",
+            "Farinha",
+            "Ovo",
+            "Sal",
+            "Pimenta"
+        ],
+        "categoria": "Entradas"
+    },
+    {
+        "id": 5,
+        "nome": "Carpaccio",
+        "descricao": "Fatias finas de carne crua com molho de mostarda",
+        "preco": 25.0,
+        "ingredientes": [
+            "Carne",
+            "Mostarda",
+            "Azeite",
+            "Alcaparras",
+            "Queijo parmes\u00e3o"
+        ],
+        "categoria": "Entradas"
+    },
+    {
+        "id": 6,
+        "nome": "Fil\u00e9 Mignon",
+        "descricao": "Fil\u00e9 mignon grelhado com molho de pimenta",
+        "preco": 45.0,
+        "ingredientes": [
+            "Fil\u00e9 mignon",
+            "Pimenta",
+            "Creme de leite",
+            "Manteiga",
+            "Sal"
+        ],
+        "categoria": "Pratos Principais"
+    },
+    {
+        "id": 7,
+        "nome": "Lasanha",
+        "descricao": "Lasanha de carne com molho bechamel",
+        "preco": 35.0,
+        "ingredientes": [
+            "Massa de lasanha",
+            "Carne mo\u00edda",
+            "Molho de tomate",
+            "Queijo",
+            "Molho bechamel"
+        ],
+        "categoria": "Pratos Principais"
+    },
+    {
+        "id": 8,
+        "nome": "Risoto de Camar\u00e3o",
+        "descricao": "Risoto cremoso de camar\u00e3o",
+        "preco": 40.0,
+        "ingredientes": [
+            "Arroz arb\u00f3reo",
+            "Camar\u00e3o",
+            "Caldo de legumes",
+            "Vinho branco",
+            "Parmes\u00e3o"
+        ],
+        "categoria": "Pratos Principais"
+    },
+    {
+        "id": 9,
+        "nome": "Frango \u00e0 Parmegiana",
+        "descricao": "Peito de frango empanado com molho de tomate e queijo",
+        "preco": 30.0,
+        "ingredientes": [
+            "Frango",
+            "Farinha de rosca",
+            "Molho de tomate",
+            "Queijo",
+            "Ovo"
+        ],
+        "categoria": "Pratos Principais"
+    },
+    {
+        "id": 10,
+        "nome": "Peixe Grelhado",
+        "descricao": "Peixe grelhado com legumes",
+        "preco": 38.0,
+        "ingredientes": [
+            "Peixe",
+            "Legumes",
+            "Azeite",
+            "Sal",
+            "Pimenta"
+        ],
+        "categoria": "Pratos Principais"
+    },
+    {
+        "id": 11,
+        "nome": "Refrigerante",
+        "descricao": "Refrigerante gelado de v\u00e1rios sabores",
+        "preco": 5.0,
+        "ingredientes": [
+            "\u00c1gua",
+            "A\u00e7\u00facar",
+            "G\u00e1s carb\u00f4nico",
+            "Aromatizantes"
+        ],
+        "categoria": "Bebidas"
+    },
+    {
+        "id": 12,
+        "nome": "Suco de Laranja",
+        "descricao": "Suco natural de laranja",
+        "preco": 8.0,
+        "ingredientes": [
+            "Laranja",
+            "\u00c1gua",
+            "A\u00e7\u00facar"
+        ],
+        "categoria": "Bebidas"
+    },
+    {
+        "id": 13,
+        "nome": "Cerveja",
+        "descricao": "Cerveja gelada",
+        "preco": 10.0,
+        "ingredientes": [
+            "Cevada",
+            "L\u00fapulo",
+            "Fermento",
+            "\u00c1gua"
+        ],
+        "categoria": "Bebidas"
+    },
+    {
+        "id": 14,
+        "nome": "Vinho Tinto",
+        "descricao": "Ta\u00e7a de vinho tinto",
+        "preco": 15.0,
+        "ingredientes": [
+            "Uvas",
+            "\u00c1lcool"
+        ],
+        "categoria": "Bebidas"
+    },
+    {
+        "id": 15,
+        "nome": "\u00c1gua Mineral",
+        "descricao": "\u00c1gua mineral sem g\u00e1s",
+        "preco": 4.0,
+        "ingredientes": [
+            "\u00c1gua"
+        ],
+        "categoria": "Bebidas"
+    },
+    {
+        "id": 16,
+        "nome": "Tiramisu",
+        "descricao": "Sobremesa italiana com queijo mascarpone e caf\u00e9",
+        "preco": 20.0,
+        "ingredientes": [
+            "Mascarpone",
+            "Caf\u00e9",
+            "Biscoito",
+            "Cacau"
+        ],
+        "categoria": "Sobremesas"
+    },
+    {
+        "id": 17,
+        "nome": "Pudim",
+        "descricao": "Pudim de leite condensado",
+        "preco": 12.0,
+        "ingredientes": [
+            "Leite condensado",
+            "Ovos",
+            "A\u00e7\u00facar",
+            "Leite"
+        ],
+        "categoria": "Sobremesas"
+    },
+    {
+        "id": 18,
+        "nome": "Sorvete",
+        "descricao": "Sorvete de v\u00e1rios sabores",
+        "preco": 10.0,
+        "ingredientes": [
+            "Leite",
+            "A\u00e7\u00facar",
+            "Aroma"
+        ],
+        "categoria": "Sobremesas"
+    },
+    {
+        "id": 19,
+        "nome": "Brownie",
+        "descricao": "Brownie de chocolate com sorvete",
+        "preco": 18.0,
+        "ingredientes": [
+            "Chocolate",
+            "Manteiga",
+            "A\u00e7\u00facar",
+            "Ovos",
+            "Farinha"
+        ],
+        "categoria": "Sobremesas"
+    },
+    {
+        "id": 20,
+        "nome": "Cheesecake",
+        "descricao": "Cheesecake de frutas vermelhas",
+        "preco": 22.0,
+        "ingredientes": [
+            "Queijo creme",
+            "Biscoito",
+            "Frutas vermelhas",
+            "A\u00e7\u00facar"
+        ],
+        "categoria": "Sobremesas"
+    },
+    {
+        "id": 21,
+        "nome": "Combo 1",
+        "descricao": "Salada Caesar + Refrigerante",
+        "preco": 18.0,
+        "ingredientes": [
+            "Salada Caesar",
+            "Refrigerante"
+        ],
+        "categoria": "Promo\u00e7\u00f5es"
+    },
+    {
+        "id": 22,
+        "nome": "Combo 2",
+        "descricao": "Lasanha + Suco de Laranja",
+        "preco": 40.0,
+        "ingredientes": [
+            "Lasanha",
+            "Suco de Laranja"
+        ],
+        "categoria": "Promo\u00e7\u00f5es"
+    },
+    {
+        "id": 23,
+        "nome": "Combo 3",
+        "descricao": "Frango \u00e0 Parmegiana + Cerveja",
+        "preco": 35.0,
+        "ingredientes": [
+            "Frango \u00e0 Parmegiana",
+            "Cerveja"
+        ],
+        "categoria": "Promo\u00e7\u00f5es"
+    },
+    {
+        "id": 24,
+        "nome": "Combo 4",
+        "descricao": "Risoto de Camar\u00e3o + Vinho Tinto",
+        "preco": 50.0,
+        "ingredientes": [
+            "Risoto de Camar\u00e3o",
+            "Vinho Tinto"
+        ],
+        "categoria": "Promo\u00e7\u00f5es"
+    },
+    {
+        "id": 25,
+        "nome": "Combo 5",
+        "descricao": "Peixe Grelhado + \u00c1gua Mineral",
+        "preco": 40.0,
+        "ingredientes": [
+            "Peixe Grelhado",
+            "\u00c1gua Mineral"
+        ],
+        "categoria": "Promo\u00e7\u00f5es"
+    },
+    {
+        "id": 26,
+        "nome": "Nigiri",
+        "descricao": "Um otimo Nigiri temperado ao Alho Sui\u00e7o com uma pitada de limao",
+        "preco": 48.0,
+        "ingredientes": [
+            "Salmao",
+            "Arroz"
+        ],
+        "categoria": "Entradas"
+    }
+]

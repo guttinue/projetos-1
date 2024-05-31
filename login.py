@@ -1,4 +1,5 @@
 import os
+import main as top
 
 #Função para armazenar a logo
 def exibir_titulo():
@@ -20,7 +21,9 @@ def mensagem_inicio():
     print('-'*20)
 
 #Função para escolher uma opção do menu
-def escolha():
+def main():
+    os.system('cls')
+    mensagem_inicio()
     opcao = int(input("Escolha uma opçaõ: "))
     
     while opcao != 200:
@@ -34,7 +37,9 @@ def escolha():
             email = input('Digite o email cadastrado: ')
             senha = input('Digite sua senha: ')
             fazer_login(email, senha)
-            voltar_inicio()
+            os.system('cls')
+            top.main()
+            
 
 
         elif opcao == 3:
@@ -67,13 +72,6 @@ def fazer_login(email, senha):
             
         else: 
             print("Nome de usuário ou senha incorretos.")
-
-
-def main():
-    os.system('cls')
-    exibir_titulo()
-    mensagem_inicio()
-    escolha()
 
 if __name__ == '__main__':
     main()

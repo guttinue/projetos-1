@@ -1,9 +1,8 @@
 import os
 import json
-import time
-import login as login
+import time 
 
-BANCO_DE_DADOS = 'data\\feedbacks.json'
+BANCO_DE_DADOS = 'data\\feedback.json'
 
 def exibir_titulo():
     print('''
@@ -17,16 +16,16 @@ def exibir_titulo():
 def carregar_feedback():
     if not os.path.exists(BANCO_DE_DADOS):
         return []
-    with open(BANCO_DE_DADOS) as arquivo:
+    with open(BANCO_DE_DADOS, 'r') as arquivo:
         return json.load(arquivo)
 
 def salvar_feedback(lista_feedback):
-    with open(BANCO_DE_DADOS) as arquivo:
+    with open(BANCO_DE_DADOS, 'w') as arquivo:
         json.dump(lista_feedback, arquivo, indent=4)
 
 def criar_feedback(nome, mensagem):
     lista_feedback = carregar_feedback()
-    feedback_id = max([variavel['id'] for variavel in lista_feedback], default=0) + 1
+    feedback_id = max([fb['id'] for fb in lista_feedback], default=0) + 1
     novo_feedback = {
         'id': feedback_id,
         'nome': nome,
@@ -56,12 +55,12 @@ def atualizar_feedback(feedback_id, novo_nome, nova_mensagem):
 
 def excluir_feedback(feedback_id):
     lista_feedback = carregar_feedback()
-    lista_feedback = [variavel for variavel in lista_feedback if variavel['id'] != feedback_id]
+    lista_feedback = [fb for fb in lista_feedback if fb['id'] != feedback_id]
     salvar_feedback(lista_feedback)
     print(f'Feedback ID {feedback_id} excluído.')
 
-def tempo_espera():
-    my_time = 30
+def temporizador():
+    my_time = 10
 
     for x in range(my_time, 0, -1):
         seconds = x % 60
@@ -70,19 +69,22 @@ def tempo_espera():
         print(f"{hours:02}:{minutes:02}:{seconds:02}")
         time.sleep(1)
 
-    +-print("TIME'S UP!")
+    print("O seu pedido chegará em breve!!")
+
 
 def main():
     exibir_titulo()
     while True:
+        print('-'*20)
         print("\nMenu de Feedback:")
-        print("1. Adicionar Feedback")
-        print("2. Ler Feedbacks")
-        print("3. Atualizar Feedback")
-        print("4. Excluir Feedback")
-        print("5. Sair")
+        print("1. ADICIONAR FEEDBACK")
+        print("2. LISTAR FEEDBACKS")
+        print("3. ATUALIZAR FEEDBACK")
+        print("4. EXCLUIR FEEDBACK")
+        print("5. ENCERRAR PEDIDO")
+        print('-'*20)
 
-        escolha = input("Escolha uma opção: ")
+        escolha = input("ESCOLHA UMA OPCAO: ")
         
         if escolha == '1':
             nome = input("Nome: ")
@@ -99,7 +101,7 @@ def main():
             feedback_id = int(input("ID do Feedback para excluir: "))
             excluir_feedback(feedback_id)
         elif escolha == '5':
-            tempo_espera()
+            temporizador()
             break
         else:
             print("Opção inválida. Tente novamente.")

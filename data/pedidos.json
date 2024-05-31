@@ -1,9 +1,95 @@
-{
-    "Pratos Principais": {
+[
+    {
         "id": 1,
-        "nome": "Carros",
-        "descricao": "Papel",
-        "calorias": "123",
-        "ingredientes": []
+        "nome": "Salada Caesar",
+        "descricao": "Salada fresca com alface, croutons e molho Caesar",
+        "preco": 15.0,
+        "ingredientes": [
+            "Alface",
+            "Croutons",
+            "Queijo parmes\u00e3o",
+            "Molho Caesar",
+            "Salada Caesar"
+        ],
+        "categoria": "Entradas"
+    },
+    {
+        "id": 26,
+        "nome": "Nigiri",
+        "descricao": "Um otimo Nigiri temperado ao Alho Sui\u00e7o com uma pitada de limao",
+        "preco": 48.0,
+        "ingredientes": [
+            "Salmao",
+            "Arroz"
+        ],
+        "categoria": "Entradas"
+    },
+    {
+        "id": 1,
+        "nome": "Salada Caesar",
+        "descricao": "Salada fresca com alface, croutons e molho Caesar",
+        "preco": 15.0,
+        "ingredientes": [
+            "Alface",
+            "Croutons",
+            "Queijo parmes\u00e3o",
+            "Molho Caesar",
+            "Salada Caesar",
+            ""
+        ],
+        "categoria": "Entradas"
+    },
+    {
+        "id": 4,
+        "nome": "An\u00e9is de Lula",
+        "descricao": "An\u00e9is de lula empanados e fritos",
+        "preco": 22.0,
+        "ingredientes": [
+            "Lula",
+            "Farinha",
+            "Ovo",
+            "Sal",
+            "Pimenta"
+        ],
+        "categoria": "Entradas"
+    },
+    {
+        "id": 13,
+        "nome": "Cerveja",
+        "descricao": "Cerveja gelada",
+        "preco": 10.0,
+        "ingredientes": [
+            "Cevada",
+            "L\u00fapulo",
+            "Fermento",
+            "\u00c1gua"
+        ],
+        "categoria": "Bebidas"
+    },
+    {
+        "id": 22,
+        "nome": "Combo 2",
+        "descricao": "Lasanha + Suco de Laranja",
+        "preco": 40.0,
+        "ingredientes": [
+            "Lasanha",
+            "Suco de Laranja",
+            "Batata Frita"
+        ],
+        "categoria": "Promo\u00e7\u00f5es"
+    },
+    {
+        "id": 5,
+        "nome": "Carpaccio",
+        "descricao": "Fatias finas de carne crua com molho de mostarda",
+        "preco": 25.0,
+        "ingredientes": [
+            "Carne",
+            "Mostarda",
+            "Azeite",
+            "Alcaparras",
+            "Queijo parmes\u00e3o"
+        ],
+        "categoria": "Entradas"
     }
-}
+]

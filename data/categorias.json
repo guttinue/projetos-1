@@ -1,9 +1,22 @@
-{
-    "menu": {
-        "1": "Entradas",
-        "2": "Prato Principal",
-        "3": "Sobremesas",
-        "4": "Promoções",
-        "5": "Bebidas"
+[
+    {
+        "id": 1,
+        "nome": "Bebidas"
+    },
+    {
+        "id": 2,
+        "nome": "Promocoes"
+    },
+    {
+        "id": 3,
+        "nome": "Entradas"
+    },
+    {
+        "id": 4,
+        "nome": "Pratos Principais"
+    },
+    {
+        "id": 5,
+        "nome": "Sobremesas"
     }
-}
+]
