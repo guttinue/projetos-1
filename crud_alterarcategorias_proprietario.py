@@ -58,6 +58,7 @@ def deletar_categoria(categoria_id):
             # Exemplo de uso
 def main():
     while True:
+        os.system('cls')
         print('-'*20)
         print("MENU DE CATEGORIAS")
         print("1. CRIAR NOVA CATEGORIA")
@@ -77,7 +78,10 @@ def main():
             ler_categorias()
         elif escolha == '3':
             ler_categorias()
-            categoria_id = int(input("ID da categoria a ser atualizada: "))
+            categoria_id = (input("ID da categoria a ser atualizada: "))
+            if not any(categoria['id'] == categoria_id for categoria in carregar_categorias()):
+                print(f"Categoria ID '{categoria_id}' não encontrada.")
+                continue
             novo_nome = input("Novo nome da categoria (pressione Enter para manter o nome atual): ")
             atualizar_categoria(categoria_id, novo_nome if novo_nome else None)
         elif escolha == '4':

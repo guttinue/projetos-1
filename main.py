@@ -13,7 +13,9 @@ def menu_inicial ():
 
 def voltar_inicio():
     input('Digite qualquer tecla para voltar o menu')
+    os.system('cls')
     main()
+    
 
 def main():
     while True:

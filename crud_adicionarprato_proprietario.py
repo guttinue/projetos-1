@@ -125,10 +125,13 @@ def main():
         if opcao == '1':
             adicionar_prato()
         elif opcao == '2':
+            os.system('cls')
             mostrar_cardapio_por_categoria()
         elif opcao == '3':
+            mostrar_cardapio_por_categoria()
             atualizar_prato()
         elif opcao == '4':
+            mostrar_cardapio_por_categoria()
             remover_prato()
         elif opcao == '5':
             print("Saindo...")
