@@ -67,8 +67,10 @@ def main():
         if escolha == '1':
             nome = input("Nome da nova categoria: ")
             criar_categoria(nome)
+            input("Pressione enter para continuar")
         elif escolha == '2':
             ler_categorias()
+            input("Pressione enter para continuar")
         elif escolha == '3':
             ler_categorias()
             categoria_id = int(input("ID da categoria a ser atualizada: "))
@@ -78,6 +80,7 @@ def main():
             ler_categorias()
             categoria_id = int(input("ID da categoria a ser excluída: "))
             deletar_categoria(categoria_id)
+            input("Pressione enter para continuar")
         elif escolha == '5':
             print("Saindo...")
             break

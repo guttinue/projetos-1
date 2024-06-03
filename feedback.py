@@ -73,7 +73,6 @@ def temporizador():
 
 
 def main():
-    exibir_titulo()
     while True:
         print('-'*20)
         print("\nMenu de Feedback:")

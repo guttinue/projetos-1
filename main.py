@@ -27,6 +27,7 @@ def main():
         elif opcao_inicial == '2':
             proprietario.main()
         elif opcao_inicial == '3':
+            print("Saindo...")
             break
         else:
             voltar_inicio()    
