@@ -1,6 +1,6 @@
 import os 
 import json
-import menu_cliente as menu
+import menu_teste as menu_teste
 import carrinho as carrinho
 import main as top
 
@@ -20,7 +20,7 @@ def main():
         
         if opcao == '1':
             os.system('cls')
-            menu.main()
+            menu_teste.main()
         elif opcao == '2':
             os.system('cls')
             carrinho.main()

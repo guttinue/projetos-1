@@ -1,6 +1,6 @@
 import os 
 import json
-import crud_proprietario as prato
+import adicionarprato_teste as prato
 import mudulo_proprietario as menu
 
 FEEDBACKS_JSON = 'data\\feedback.json'

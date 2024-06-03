@@ -106,7 +106,7 @@ def mensagem_inicio():
 # Função principal
 def main():
     while True:
-        prato_id = int(input("Digite o ID do prato que deseja personalizar: "))
+        prato_id = (input("Digite o ID do prato que deseja personalizar: "))
         mostrar_prato(prato_id)
         mensagem_inicio()
         opcao = input("ESCOLHA UMA OPÇÃO:\n>>> ")
@@ -128,7 +128,7 @@ def main():
             os.system('cls')
             carrinhot.main()
         else:
-            print("Opção inválida. Tente novamente.")
+            carrinho.main()
 
 if __name__ == "__main__":
     main()

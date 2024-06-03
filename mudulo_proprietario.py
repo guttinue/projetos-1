@@ -1,6 +1,6 @@
 import os 
 import json
-import crud_proprietario as prato
+import adicionarprato_teste as prato
 import ler_feedback_proprietario as feedback
 import crud_alterarcategorias_proprietario as categoria
 import ler_pedidos as pedidos  
