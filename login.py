@@ -1,7 +1,6 @@
 import os
 import main as top
 
-#Função para armazenar a logo
 def exibir_titulo():
     print('''
     ███╗░░░███╗███████╗███╗░░██╗░█████╗░░█████╗░████████╗██╗░░██╗
@@ -11,7 +10,6 @@ def exibir_titulo():
     ██║░╚═╝░██║███████╗██║░╚███║╚█████╔╝╚█████╔╝░░░██║░░░██║░░██║
     ╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚══╝░╚════╝░░╚════╝░░░░╚═╝░░░╚═╝░░╚═╝''')
 
-#Função para armazenar a mensagem de opções
 def mensagem_inicio():
     print('-'*20)
     print('1- CADASTRAR USUÁRIO')
@@ -19,7 +17,6 @@ def mensagem_inicio():
     print('3- SAIR')
     print('-'*20)
 
-#Função para escolher uma opção do menu
 def main():
     os.system('cls')
     exibir_titulo()
@@ -48,20 +45,15 @@ def main():
             print('Escolha uma opção válida')
             voltar_inicio()
             
-
-#Função para voltar o menu inicial
 def voltar_inicio():
     input('Digite qualquer tecla para voltar o menu')
     main()
         
-usuarios = []  #Lista vazia para armazenar novos valores
+usuarios = []  
 
-
-#Função para cadastro |   2 parâmetros
-def cadastrar_usuario    (email, senha):
-    usuarios.append({'email': email, 'senha': senha})  #usuarios.append adiciona um valor na lista, e vai armazenar um dicionario com valores na lista(nome e senha)
-    print("Usuário cadastrado com sucesso!")
-    #>>função de prosseguir<< 
+def cadastrar_usuario(email, senha):
+    usuarios.append({'email': email, 'senha': senha})  
+    print("Usuário cadastrado com sucesso!") 
     
 def fazer_login(email, senha):
     for usuario in usuarios:
@@ -70,6 +62,7 @@ def fazer_login(email, senha):
             
         else: 
             print("Nome de usuário ou senha incorretos.")
+            voltar_inicio()
 
 if __name__ == '__main__':
     main()

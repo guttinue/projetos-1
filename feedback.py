@@ -55,19 +55,19 @@ def atualizar_feedback(feedback_id, novo_nome, nova_mensagem):
     print(f'Feedback ID {feedback_id} não encontrado.')
 
 def excluir_feedback(feedback_id):
-    lista_feedback = carregar_feedback()
-    lista_feedback = [fb for fb in lista_feedback if fb['id'] != feedback_id]
+    lista_feedback = carregar_feedback() 
+    lista_feedback = [fb for fb in lista_feedback if fb['id'] != feedback_id] 
     salvar_feedback(lista_feedback)
     print(f'Feedback ID {feedback_id} excluído.')
 
 def temporizador():
-    my_time = 10
+    tempo = 10
 
-    for x in range(my_time, 0, -1):
-        seconds = x % 60
-        minutes = int(x / 60) % 60
-        hours = int(x / 3600)
-        print(f"{hours:02}:{minutes:02}:{seconds:02}")
+    for x in range(tempo, 0, -1):
+        segundos = x % 60
+        minutos = int(x / 60) % 60
+        horas = int(x / 3600)
+        print(f"{horas:02}:{minutos:02}:{segundos:02}")
         time.sleep(1)
 
     print("O seu pedido chegará em breve!!")

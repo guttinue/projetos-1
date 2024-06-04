@@ -1,55 +1,51 @@
 import os
 import json
 
-# Caminho do arquivo JSON
 arquivo_cardapio = os.path.join(os.path.dirname(__file__), 'data\\cardapio.json')
 CATEGORIAS_JSON = 'data\\categorias.json'
 
-# Funções de manipulação do JSON
 def carregar_dados(arquivo):
     if not os.path.exists(arquivo):
-        with open(arquivo, 'w') as f:
-            json.dump([], f)
+        with open(arquivo, 'w') as f: 
+            json.dump([], f) 
     with open(arquivo, 'r') as f:
-        return json.load(f)
+        return json.load(f) 
 
-def salvar_dados(dados, arquivo):
-    with open(arquivo, 'w') as f:
-        json.dump(dados, f, indent=4)
+def salvar_dados(dados, arquivo): 
+    with open(arquivo, 'w') as f: 
+        json.dump(dados, f, indent=4) 
 
 def carregar_categorias():
     if not os.path.exists(CATEGORIAS_JSON):
-        return []
-    with open(CATEGORIAS_JSON, 'r') as f:
-        return json.load(f)
+        return [] 
+    with open(CATEGORIAS_JSON, 'r') as f:   
+        return json.load(f) 
 
-# Função para adicionar um prato
 def adicionar_prato():
     dados = carregar_dados(arquivo_cardapio)
     nome = input("Digite o nome do prato: ")
     descricao = input("Digite a descrição do prato: ")
     preco = float(input("Digite o preço do prato: "))
-    ingredientes = input("Digite os ingredientes do prato (separados por vírgula): ").split(',')
-    categoria = selecionar_categoria()
+    ingredientes = input("Digite os ingredientes do prato (separados por vírgula): ").split(',') 
+    categoria = selecionar_categoria() 
 
     novo_prato = {
         "id": len(dados) + 1,
-        "nome": nome,
+        "nome": nome, 
         "descricao": descricao,
         "preco": preco,
-        "ingredientes": [ingrediente.strip() for ingrediente in ingredientes],
+        "ingredientes": [ingrediente.strip() for ingrediente in ingredientes], 
         "categoria": categoria
     }
 
-    dados.append(novo_prato)
-    salvar_dados(dados, arquivo_cardapio)
-    print("Prato adicionado ao cardápio com sucesso!")
+    dados.append(novo_prato) 
+    salvar_dados(dados, arquivo_cardapio) 
+    print("Prato adicionado ao cardápio com sucesso!") #
 
-# Função para mostrar pratos por categoria
-def mostrar_cardapio_por_categoria():
+def mostrar_cardapio_por_categoria(): 
     dados = carregar_dados(arquivo_cardapio)
     categoria = selecionar_categoria()
-    pratos_categoria = [prato for prato in dados if prato['categoria'] == categoria]
+    pratos_categoria = [prato for prato in dados if prato['categoria'] == categoria] 
 
     if pratos_categoria:
         print(f"Categoria: {categoria}")
@@ -58,7 +54,7 @@ def mostrar_cardapio_por_categoria():
             print(f"ID: {prato['id']}")
             print(f"NOME: {prato['nome']}")
             print(f"DESCRIÇÃO: {prato['descricao']}")
-            print(f"PREÇO: R${prato['preco']:.2f}")
+            print(f"PREÇO: R${prato['preco']:.2f}") 
             print("INGREDIENTES:")
             for ingrediente in prato['ingredientes']:
                 print(f"- {ingrediente}")
@@ -66,17 +62,15 @@ def mostrar_cardapio_por_categoria():
     else:
         print(f"Nenhum prato encontrado na categoria {categoria}.")
 
-# Função para atualizar um prato
 def atualizar_prato():
     dados = carregar_dados(arquivo_cardapio)
     id_prato = int(input("Digite o ID do prato que deseja atualizar: "))
-    prato = next((p for p in dados if p['id'] == id_prato), None)
-
+    prato = next((p for p in dados if p['id'] == id_prato), None) 
     if prato:
         novo_nome = input(f"Digite o novo nome do prato (atual: {prato['nome']}): ")
         nova_descricao = input(f"Digite a nova descrição do prato (atual: {prato['descricao']}): ")
         novo_preco = float(input(f"Digite o novo preço do prato (atual: R${prato['preco']:.2f}): "))
-        novos_ingredientes = input(f"Digite os novos ingredientes do prato (atual: {', '.join(prato['ingredientes'])}) (separados por vírgula): ").split(',')
+        novos_ingredientes = input(f"Digite os novos ingredientes do prato (atual: {', '.join(prato['ingredientes'])}) (separados por vírgula): ").split(',') # Separa os ingredientes por vírgula
         nova_categoria = selecionar_categoria()
 
         prato['nome'] = novo_nome
@@ -90,11 +84,10 @@ def atualizar_prato():
     else:
         print("Prato não encontrado.")
 
-# Função para remover um prato
 def remover_prato():
     dados = carregar_dados(arquivo_cardapio)
     id_prato = int(input("Digite o ID do prato que deseja remover: "))
-    prato = next((p for p in dados if p['id'] == id_prato), None)
+    prato = next((p for p in dados if p['id'] == id_prato), None) 
 
     if prato:
         dados.remove(prato)
@@ -103,16 +96,14 @@ def remover_prato():
     else:
         print("Prato não encontrado.")
 
-# Função para selecionar categoria
 def selecionar_categoria():
     categorias = carregar_categorias()
     print("Selecione uma categoria:")
-    for i, categoria in enumerate(categorias, 1):
+    for i, categoria in enumerate(categorias, 1): 
         print(f"{i}. {categoria['nome']}")
     opcao = int(input("Escolha uma opção: "))
-    return categorias[opcao - 1]['nome']
+    return categorias[opcao - 1]['nome'] 
 
-# Função para exibir o menu principal
 def exibir_menu():
     os.system('cls')
     print('-'*20)
@@ -123,7 +114,6 @@ def exibir_menu():
     print("5- SAIR")
     print('-'*20)
 
-# Função principal
 def main():
     while True:
         exibir_menu()

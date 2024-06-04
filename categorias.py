@@ -37,8 +37,8 @@ def atualizar_categoria(categoria_id, novo_nome=None):
     categorias = carregar_categorias()
     for categoria in categorias:
         if categoria['id'] == categoria_id:
-            if novo_nome:
-                categoria['nome'] = novo_nome
+            if novo_nome:   
+                categoria['nome'] = novo_nome 
             salvar_categorias(categorias)
             print(f"Categoria ID '{categoria_id}' atualizada com sucesso.")
             return
@@ -46,7 +46,7 @@ def atualizar_categoria(categoria_id, novo_nome=None):
 
 def deletar_categoria(categoria_id):
     categorias = carregar_categorias()
-    categorias = [categoria for categoria in categorias if categoria['id'] != categoria_id]
+    categorias = [categoria for categoria in categorias if categoria['id'] != categoria_id] 
     salvar_categorias(categorias)
     print(f"Categoria ID '{categoria_id}' excluída com sucesso.")
 

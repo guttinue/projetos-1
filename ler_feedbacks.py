@@ -11,8 +11,6 @@ def carregar_feedbacks():
     with open(FEEDBACKS_JSON, 'r') as f:
         return json.load(f)
 
-        # Função para listar todos os feedbacks
-
 def listar_feedbacks():
     feedbacks = carregar_feedbacks()
     if feedbacks:

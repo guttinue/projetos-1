@@ -18,7 +18,6 @@ def voltar_inicio():
     
 def finalizar_programa():
     input('Programa finalizado. Digite qualquer tecla para sair')
-    os.system('cls')
     exit()
 
 def main():

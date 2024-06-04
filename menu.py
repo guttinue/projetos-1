@@ -18,7 +18,7 @@ def salvar_dados(dados, arquivo):
 
 def mostrar_pratos_categoria(categoria):
     dados = carregar_dados(CARDAPIO_JSON)
-    pratos_categoria = [prato for prato in dados if prato['categoria'] == categoria]
+    pratos_categoria = [prato for prato in dados if prato['categoria'] == categoria] 
 
     if pratos_categoria:
         print(f"Categoria: {categoria}")
@@ -72,7 +72,7 @@ def main():
     os.system('cls')
     while True:
         categoria = selecionar_categoria()
-        if categoria is None:
+        if categoria is None: #
             break
         os.system('cls')
         mostrar_pratos_categoria(categoria)

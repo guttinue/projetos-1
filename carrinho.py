@@ -22,11 +22,11 @@ def salvar_dados(dados, arquivo):
 def mostrar_pedido():
     dados = carregar_dados(arquivo_carrinho)
 
-    if dados:  # Verifica se há dados no arquivo
+    if dados:  
         print("=" * 50)
         print("DETALHES DOS PRATOS:")
         print("-" * 50)
-        for prato in dados:  # Itera sobre cada prato na lista
+        for prato in dados:  
             print(f"ID: {prato['id']}")
             print(f"NOME: {prato['nome']}")
             print(f"DESCRIÇÃO: {prato['descricao']}")
@@ -39,16 +39,16 @@ def mostrar_pedido():
         print("😒 NENHUM PRATO NO CARRINHO.")
 
 def remover_pedido():
-    salvar_dados([], arquivo_carrinho)  # Sobrescreve o arquivo com uma lista vazia
+    salvar_dados([], arquivo_carrinho)  
     print("😡 TODOS OS PRATOS FORAM EXCLUÍDOS COM SUCESSO!")
 
 def atualizar_pedido():
     dados = carregar_dados(arquivo_carrinho)
 
-    if dados:  # Verifica se há dados no arquivo
+    if dados:  
         id_prato = int(input("Digite o ID do prato que deseja atualizar: "))
         for prato in dados:
-            if prato['id'] == id_prato:  # Verifica se o ID do prato corresponde ao fornecido pelo usuário
+            if prato['id'] == id_prato:  
                 novos_ingredientes = input("Digite os novos ingredientes do prato (separados por vírgula):\n>>> ").split(',')
                 prato['ingredientes'].extend([ingrediente.strip() for ingrediente in novos_ingredientes])
                 salvar_dados(dados, arquivo_carrinho)
@@ -61,21 +61,17 @@ def atualizar_pedido():
 def finalizar_pedido():
     dados_carrinho = carregar_dados(arquivo_carrinho)
 
-    if dados_carrinho:  # Verifica se há pedidos no carrinho
+    if dados_carrinho: 
         print("Seu pedido foi finalizado com sucesso!")
         print("Aqui estão os detalhes do seu pedido:")
         mostrar_pedido()
-        
-        # Carrega os pedidos existentes
+      
         pedidos = carregar_dados(arquivo_pedidos)
         
-        # Adiciona os pedidos do carrinho ao arquivo de pedidos
         pedidos.extend(dados_carrinho)
         
-        # Salva os pedidos atualizados no arquivo de pedidos
         salvar_dados(pedidos, arquivo_pedidos)
         
-        # Limpa o carrinho
         salvar_dados([], arquivo_carrinho)
     else:
         print("Não há pedidos para finalizar.")
