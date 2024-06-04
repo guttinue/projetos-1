@@ -101,6 +101,7 @@ def main():
             excluir_feedback(feedback_id)
         elif escolha == '5':
             temporizador()
+            input("Digite qualquer tecla para sair")
             break
         else:
             print("Opção inválida. Tente novamente.")

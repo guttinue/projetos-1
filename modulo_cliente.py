@@ -1,6 +1,6 @@
 import os 
 import json
-import menu_teste as menu_teste
+import menu as menu
 import carrinho as carrinho
 import main as top
 
@@ -12,6 +12,7 @@ def menu_cliente():
         print("2- VER CARRNHO")
         print("3- VOLTAR")
         print('-'*20)
+
 def main():
     while True: 
         os.system('cls')
@@ -20,7 +21,7 @@ def main():
         
         if opcao == '1':
             os.system('cls')
-            menu_teste.main()
+            menu.main()
         elif opcao == '2':
             os.system('cls')
             carrinho.main()

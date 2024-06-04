@@ -18,16 +18,15 @@ def voltar_inicio():
     
 
 def main():
+    menu_inicial()
+    opcao_inicial = input("INFORME UMA OPÇÃO: ")
+    
     while True:
-        menu_inicial()
-        opcao_inicial = input("INFORME UMA OPÇÃO: ")
-
         if opcao_inicial == '1':
             cliente.main()
         elif opcao_inicial == '2':
             proprietario.main()
         elif opcao_inicial == '3':
-            print("Saindo...")
             break
         else:
             voltar_inicio()    

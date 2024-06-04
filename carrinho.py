@@ -1,6 +1,6 @@
 import os
 import json
-import menu_teste as cliente
+import menu as cliente
 import feedback as feedback
 import personalizacao as personalizacao 
 import modulo_cliente as modulo

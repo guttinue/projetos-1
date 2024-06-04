@@ -1,52 +1,63 @@
 import json
 import os
 import carrinho as carrinhot
+
 # Define o caminho para o arquivo JSON
-carrinho = os.path.join(os.path.dirname(__file__), 'data\\carrinho.json')
+carrinho = os.path.join(os.path.dirname(__file__), 'data/carrinho.json')
 
 # Função para carregar os dados do arquivo JSON
 def load_data():
     if os.path.exists(carrinho):
-        with open(carrinho, 'r') as f:
-            return json.load(f)
-    return {"Pratos Principais": {"id": 1, "nome": "", "descricao": "", "calorias": "", "ingredientes": []}}
+        with open(carrinho, 'r', encoding='utf-8') as f:
+            try:
+                return json.load(f)
+            except json.JSONDecodeError as e:
+                print(f"Erro ao carregar dados: {e}")
+                return []
+    return []
 
 # Função para salvar os dados no arquivo JSON
 def save_data(data):
-    with open(carrinho, 'w') as f:
+    with open(carrinho, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4)
 
 # Função para adicionar um ingrediente
 def adicionar_ingrediente(prato_id, ingrediente):
     data = load_data()
+    prato_encontrado = False
     for prato in data:
-        if prato["id"] == prato_id:
+        if str(prato["id"]) == str(prato_id):
             prato["ingredientes"].append(ingrediente)
             save_data(data)
             print("Ingrediente adicionado ao prato com sucesso!")
-            return
-    print("Prato não encontrado.")
+            prato_encontrado = True
+            break
+    if not prato_encontrado:
+        print("Prato não encontrado.")
 
 # Função para remover um ingrediente
 def remover_ingrediente(prato_id, ingrediente):
     data = load_data()
+    prato_encontrado = False
     for prato in data:
-        if prato["id"] == prato_id:
+        if str(prato["id"]) == str(prato_id):
             if ingrediente in prato["ingredientes"]:
                 prato["ingredientes"].remove(ingrediente)
                 save_data(data)
                 print("Ingrediente removido do prato com sucesso!")
-                return
             else:
                 print("Ingrediente não encontrado no prato.")
-                return
-    print("Prato não encontrado.")
+            prato_encontrado = True
+            break
+    if not prato_encontrado:
+        print("Prato não encontrado.")
 
 # Função para mostrar os ingredientes
 def mostrar_ingredientes(prato_id):
     data = load_data()
+    prato_encontrado = False
     for prato in data:
-        if prato["id"] == prato_id:
+        if str(prato["id"]) == str(prato_id):
             ingredientes = prato["ingredientes"]
             if ingredientes:
                 print("Ingredientes do prato:")
@@ -54,43 +65,50 @@ def mostrar_ingredientes(prato_id):
                     print(f"- {ing}")
             else:
                 print("Nenhum ingrediente no prato.")
-            return
-    print("Prato não encontrado.")
+            prato_encontrado = True
+            break
+    if not prato_encontrado:
+        print("Prato não encontrado.")
 
 # Função para atualizar um ingrediente
 def atualizar_ingrediente(prato_id, ingrediente_antigo, ingrediente_novo):
     data = load_data()
+    prato_encontrado = False
     for prato in data:
-        if prato["id"] == prato_id:
+        if str(prato["id"]) == str(prato_id):
             ingredientes = prato["ingredientes"]
             if ingrediente_antigo in ingredientes:
                 index = ingredientes.index(ingrediente_antigo)
                 ingredientes[index] = ingrediente_novo
                 save_data(data)
                 print("Ingrediente atualizado com sucesso!")
-                return
             else:
                 print("Ingrediente antigo não encontrado no prato.")
-                return
-    print("Prato não encontrado.")
+            prato_encontrado = True
+            break
+    if not prato_encontrado:
+        print("Prato não encontrado.")
 
 # Função para exibir os detalhes do prato
 def mostrar_prato(prato_id):
     data = load_data()
+    prato_encontrado = False
     for prato in data:
-        if prato["id"] == prato_id:
+        if str(prato["id"]) == str(prato_id):
             print("\nDetalhes do Prato:")
             print(f"ID: {prato['id']}")
             print(f"Nome: {prato['nome']}")
             print(f"Descrição: {prato['descricao']}")
-            print(f"Preço: {prato['preco']}")
+            print(f"Preço: {prato.get('preco', 'N/A')}")
             print("Ingredientes: ", end="")
             if prato["ingredientes"]:
                 print(", ".join(prato["ingredientes"]))
             else:
                 print("Nenhum")
-            return
-    print("Prato não encontrado.")
+            prato_encontrado = True
+            break
+    if not prato_encontrado:
+        print("Prato não encontrado.")
 
 # Função para exibir o menu
 def mensagem_inicio():
@@ -105,9 +123,10 @@ def mensagem_inicio():
 
 # Função principal
 def main():
+    prato_id = input("Digite o ID do prato que deseja personalizar: ")
+    mostrar_prato(prato_id)
+
     while True:
-        prato_id = (input("Digite o ID do prato que deseja personalizar: "))
-        mostrar_prato(prato_id)
         mensagem_inicio()
         opcao = input("ESCOLHA UMA OPÇÃO:\n>>> ")
 
@@ -128,7 +147,7 @@ def main():
             os.system('cls')
             carrinhot.main()
         else:
-            carrinho.main()
+            print("Opção inválida, por favor digite novamente")
 
 if __name__ == "__main__":
     main()
