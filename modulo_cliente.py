@@ -22,9 +22,11 @@ def main():
         if opcao == '1':
             os.system('cls')
             menu.main()
+            break
         elif opcao == '2':
             os.system('cls')
             carrinho.main()
+            break
         elif opcao == '3':
             os.system('cls')
             top.main()

@@ -1,30 +1,16 @@
 [
     {
-        "id": 9,
-        "nome": "Frango \u00e0 Parmegiana",
-        "descricao": "Peito de frango empanado com molho de tomate e queijo",
-        "preco": 30.0,
+        "id": 4,
+        "nome": "An\u00e9is de Lula",
+        "descricao": "An\u00e9is de lula empanados e fritos",
+        "preco": 22.0,
         "ingredientes": [
-            "Frango",
-            "Farinha de rosca",
-            "Molho de tomate",
-            "Queijo",
+            "Lula",
+            "Farinha",
             "Ovo",
-            "Batata frita"
+            "Sal",
+            "Pimenta"
         ],
-        "categoria": "Pratos Principais"
-    },
-    {
-        "id": 13,
-        "nome": "Cerveja",
-        "descricao": "Cerveja gelada",
-        "preco": 10.0,
-        "ingredientes": [
-            "Cevada",
-            "L\u00fapulo",
-            "Fermento",
-            "\u00c1gua"
-        ],
-        "categoria": "Bebidas"
+        "categoria": "Entradas"
     }
 ]

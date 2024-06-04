@@ -16,6 +16,10 @@ def voltar_inicio():
     os.system('cls')
     main()
     
+def finalizar_programa():
+    input('Programa finalizado. Digite qualquer tecla para sair')
+    os.system('cls')
+    exit()
 
 def main():
     menu_inicial()
@@ -27,6 +31,7 @@ def main():
         elif opcao_inicial == '2':
             proprietario.main()
         elif opcao_inicial == '3':
+            finalizar_programa()
             break
         else:
             voltar_inicio()    

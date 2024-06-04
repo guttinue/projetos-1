@@ -1,6 +1,7 @@
 import os
 import json
 import time 
+import main as top
 
 BANCO_DE_DADOS = 'data\\feedback.json'
 
@@ -102,6 +103,7 @@ def main():
         elif escolha == '5':
             temporizador()
             input("Digite qualquer tecla para sair")
+            top.main()
             break
         else:
             print("Opção inválida. Tente novamente.")
